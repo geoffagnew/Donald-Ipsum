@@ -1,0 +1,18 @@
+body {
+  background-color: white; }
+
+a {
+  text-decoration: none; }
+
+p {
+  margin-bottom: 40px; }
+
+.block-body {
+  width: 50%;
+  margin: 0 auto; }
+
+form .input-wrap {
+  width: 100%;
+  margin-bottom: 25px; }
+
+/*# sourceMappingURL=output.css.map */
