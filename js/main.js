@@ -1,37 +1,40 @@
-// Build array to contain sentences for randomizing
+// arrays to load
+	// rascist
+	// misogynistic
+	// general hatred
 
-// On user submit, capture the number of paragraphs they would like display
-	// randomize that number of items in the array
-		// compose a paragraph of those randomized sentences
-			// capitalize the first letter at the beginning of each paragraph
+// var racism = [];
+// var misogyny = [];
+// var hatred = [];
 
-//	get the element from the page where we'd like to load the paragraphs 
-// 	build the elements
-//  load the paragraphs
-
-// user inputs a request of 5 paragraphs
-// create a loop that fires 5 times
-	// in each loop, create a random math object between the numbers 1 and 10
-		// put that in a variable and use it to pull that item based on index in the array
 
 var gibberish = ['This is sentence one and it goes on and on and on and on. Well it\'s still going ins\'t it? Who would believe it?', 'This is sentence two and it goes on and on and on and on. Well it\'s still going ins\'t it? Who would believe it?', 'This is sentence three and it goes on and on and on and on. Well it\'s still going ins\'t it? Who would believe it?', 'This is sentence four and it goes on and on and on and on. Well it\'s still going ins\'t it? Who would believe it?', 'This is sentence five and it goes on and on and on and on. Well it\'s still going ins\'t it? Who would believe it?', 'This is sentence six and it goes on and on and on and on. Well it\'s still going ins\'t it? Who would believe it?', 'This is sentence seven and it goes on and on and on and on. Well it\'s still going ins\'t it? Who would believe it?', 'This is sentence eight and it goes on and on and on and on. Well it\'s still going ins\'t it? Who would believe it?', 'This is sentence nine and it goes on and on and on and on. Well it\'s still going ins\'t it? Who would believe it?', 'This is sentence ten and it goes on and on and on and on. Well it\'s still going ins\'t it? Who would believe it?'];
 
-function buildSentences(sentReq) {
+var gibberish2 = ['One Blah blah blah sentence from selection group 2; a little more a little less. Who freaking cares.', 'Two More nonsense from selection group 2 that carries on and on and on.', 'Three Selection group 2 here bozo; still carrying on for the sake of testing blah blah blah.', 'Four Blah blah blah sentence from selection group 2; a little more a little less. Who freaking cares.', 'Five Blah blah blah sentence from selection group 2; a little more a little less. Who freaking cares.', 'Six Blah blah blah sentence from selection group 2; a little more a little less. Who freaking cares.', 'Seven Blah blah blah sentence from selection group 2; a little more a little less. Who freaking cares.', 'Eight Blah blah blah sentence from selection group 2; a little more a little less. Who freaking cares.', 'Nine Blah blah blah sentence from selection group 2; a little more a little less. Who freaking cares.', 'Ten Blah blah blah sentence from selection group 2; a little more a little less. Who freaking cares.'];
+
+function buildSentences(subSelect, sentReq) {
 	var collectedSentences = '';
+	var subjectChoice = '';
+	// select an array to display from
+	if (subSelect === 'racism') {
+		subjectChoice = gibberish;
+	} else {
+		subjectChoice = gibberish2;
+	}
 	for (var i = 0; i < sentReq; i++) {
 		var randomizer = Math.floor((Math.random() * 9) +1);
-		var sentence = gibberish[randomizer]; // pull a sentence at random
+		var sentence = subjectChoice[randomizer]; // pull a sentence at random
 		collectedSentences += sentence + ' '; // add that random sentence to the collectedSentences variable
 	}
 	return collectedSentences;
 }
 
-function buildPara(paraReq, sentReq) {
+function buildPara(subSelect, paraReq, sentReq) {
 	// loop that creates the number of paragraphs required and prints html to page
 	for (var i = 0; i < paraReq; i++) {
 		var collectedPara = '';
 		// build the paragraph out of the sentences constructed above
-		collectedPara += buildSentences(sentReq);
+		collectedPara += buildSentences(subSelect, sentReq);
 		// build the element for this paragraph and add it to the page
 		var buildIpsum = document.getElementById('body-text');
 		var elemP = document.createElement('p');
@@ -42,6 +45,20 @@ function buildPara(paraReq, sentReq) {
 	return collectedPara;
 }
 
-// buildPara(5, 9);
+function getInputs(e) {
+	e.preventDefault();
+	var subjectSelect = document.getElementById('subject').value;
+	var numPara = document.getElementById('paragraphs').value;
+	var numSent = document.getElementById('sentences').value;
+	buildPara(subjectSelect, numPara, numSent);
+}
+
+var btn = document.getElementById('btn');
+
+btn.addEventListener('click', function(e) {
+	getInputs(e);
+}, false);
+
+
 
 

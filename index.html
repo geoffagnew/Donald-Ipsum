@@ -18,15 +18,26 @@
 
     <div id="main-container" class="container">
         <div class="block-body" id="body-text">
-        <h1>Donald Ipsum</h1>
+       <!--  <h1>Donald Ipsum</h1> -->
             <form action="/my-handling-form-page" method="post">
                 <div class="input-wrap">
+                    <label for="name">Nature of text</label>
+                    <select id="subject">
+                        <option value="racism">Group 1</option>
+                        <option value="misogyny">Group 2</option>
+                        <option value="general">Group 3</option>
+                    </select>
+                </div>
+                <div class="input-wrap">
                     <label for="name">Number of Paragraphs</label>
-                    <input type="text" id="pararaphs" />
+                    <input type="text" id="paragraphs" />
                 </div>
                 <div class="input-wrap">
                     <label for="name">Number of sentences per paragraph</label>
                     <input type="text" id="sentences" />
+                </div>
+                <div class="input-wrap">
+                    <button id="btn">Go</button>
                 </div>
             </form>
         </div>
