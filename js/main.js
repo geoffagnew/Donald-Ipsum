@@ -31,6 +31,9 @@ function buildPara(subSelect, paraReq, sentReq) {
 	var paraCount = 0;
 	var buildIpsum = document.getElementById('results');
 	// add div to hold the paragraphs
+	var tempDiv = document.createElement('div');
+	tempDiv.setAttribute('id', 'temp-div');
+	buildIpsum.appendChild(tempDiv);
 	// loop that creates the number of paragraphs required and prints html to page
 	for (var i = 0; i < paraReq; i++) {
 		// logic for optional headings
@@ -48,7 +51,7 @@ function buildPara(subSelect, paraReq, sentReq) {
 		var elemP = document.createElement('p');
 		var newText = document.createTextNode(collectedPara);
 		elemP.appendChild(newText);
-		buildIpsum.appendChild(elemP);
+		tempDiv.appendChild(elemP);
 	}
 	return collectedPara;
 }
@@ -65,6 +68,7 @@ function buildPara(subSelect, paraReq, sentReq) {
 // var headings = false;
 
 // Get the selections from form and pass to buildPara function
+
 function getInputs(e) {
 	e.preventDefault();
 	var subjectSelect = document.getElementById('subject').value;
@@ -76,9 +80,12 @@ function getInputs(e) {
 // clear data from results div and empty variables
 function clearData(e) {
 	e.preventDefault();
-	var getParas = document.getElementsByTagName('p');
-	var containerEl = getParas.parentNode;
-	containerEl.removeChild(getParas);
+	// Remove temp-div container from the page
+	var getTempDiv = document.getElementById('temp-div');
+	var mainDiv = getTempDiv.parentNode;
+	mainDiv.removeChild(getTempDiv);
+	// clear the form values
+	document.getElementById('donald-inputs').reset();
 }
 
 var btn = document.getElementById('btn');
