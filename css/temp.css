@@ -5,3 +5,7 @@
 .passed p.errorMessage, .required p.errorMessage {
     display:none;
 }
+
+.hide {
+	display:none;
+}

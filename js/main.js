@@ -94,18 +94,13 @@ function clearData(e) {
 // }, false);
 
 // Reset Button
-// var btnReset = document.getElementById('reset-btn');
+var btnReset = document.getElementById('reset-btn');
+btnReset.setAttribute('class', 'hide');
 
-// btnReset.addEventListener('click', function(e) {
-// 	clearData(e);
-// }, false);
-
-// var myForm = document.getElementById('donald-inputs');
-	
-// 	myForm.addEventListener('submit', function(e) {
-// 		e.preventDefault();
-// 		console.log('works');
-// 	});
+btnReset.addEventListener('click', function(e) {
+	clearData(e);
+	btnReset.setAttribute('class', 'hide');
+}, false);
 
 
 // Event handler for form validation nested in IIFE
@@ -149,6 +144,7 @@ function clearData(e) {
 		if (isFormValid === true) {
 			// alert('Congrats you passed');
 			getInputs(e);
+			btnReset.removeAttribute('class', 'hide');
 		} else {
 			alert('One or more inputs have no value. Please correct.');
 		}
