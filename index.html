@@ -12,6 +12,7 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/output.css">
+        <link rel="stylesheet" href="css/temp.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
@@ -23,25 +24,27 @@
                 <div class="input-wrap">
                     <label for="name">Nature of text</label>
                     <select id="subject">
-                        <option value="racism">Racist</option>
+                        <option value="racism">Racism</option>
                         <option value="misogyny">Misogynistic</option>
                         <option value="weird">Weird and Delusional</option>
                     </select>
                 </div>
-                <div class="input-wrap">
+                <div class="input-wrap required">
                     <label for="name">Number of Paragraphs</label>
-                    <input type="number" id="paragraphs" />
+                    <input type="number" id="paragraphs" name="paragraphs" />
+                    <p class="errorMessage">Fill field</p>
                 </div>
-                <div class="input-wrap">
+                <div class="input-wrap required">
                     <label for="name">Number of sentences per paragraph</label>
-                    <input type="number" id="sentences" />
+                    <input type="number" id="sentences" name="sentences" />
+                    <p class="errorMessage">Fill field</p>
                 </div>
                 <div class="input-wrap">
-                    <button id="btn">Go</button>
+                    <button type="submit" id="btn">Go</button>
                 </div>
-                <div class="input-wrap">
+                <!-- <div class="input-wrap">
                     <button id="reset-btn">Reset</button>
-                </div>
+                </div> -->
             </form>
             <div id="results"></div>
         </div>
@@ -49,6 +52,7 @@
 
        <!--  <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script> -->
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+        <!-- <script src="js/validation.js"></script> -->
         <script src="js/main.js"></script>
     </body>
 </html>

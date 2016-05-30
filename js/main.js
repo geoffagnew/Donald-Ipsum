@@ -5,7 +5,6 @@ var misogyny = ['You know, it really doesn’t matter what the media write as lo
 
 var weird = ['I’ve said if Ivanka weren’t my daughter, perhaps I’d be dating her.', 'My fingers are long and beautiful, as, it has been well documented, are various other parts of my body.', 'All the women on The Apprentice flirted with me — consciously or unconsciously. That’s to be expected.', 'I watched when the World Trade Center came tumbling down. And I watched in Jersey City, New Jersey, where thousands and thousands of people were cheering as that building was coming down. Thousands of people were cheering.', 'It is very hard for them to attack me on looks, because I am so good looking.', 'Well, somebody’s doing the raping, Don! I mean somebody’s doing it! Who’s doing the raping? Who’s doing the raping?' , 'While @BetteMidler is an extremely unattractive woman, I refuse to say that because I always insist on being politically correct.', 'I know words, I have the best words. I have the best, but there is no better word than stupid.'];
 
-
 function buildSentences(subSelect, sentReq) {
 	var collectedSentences = '';
 	var subjectChoice = '';
@@ -74,7 +73,7 @@ function getInputs(e) {
 	var subjectSelect = document.getElementById('subject').value;
 	var numPara = document.getElementById('paragraphs').value;
 	var numSent = document.getElementById('sentences').value;
-	buildPara(subjectSelect, numPara, numSent);
+	buildPara(subjectSelect, numPara, numSent); 
 }
 
 // clear data from results div and empty variables
@@ -88,18 +87,97 @@ function clearData(e) {
 	document.getElementById('donald-inputs').reset();
 }
 
-var btn = document.getElementById('btn');
+// var btn = document.getElementById('btn');
 
-btn.addEventListener('click', function(e) {
-	getInputs(e);
-}, false);
+// btn.addEventListener('click', function(e) {
+// 	getInputs(e);
+// }, false);
 
 // Reset Button
-var btnReset = document.getElementById('reset-btn');
+// var btnReset = document.getElementById('reset-btn');
 
-btnReset.addEventListener('click', function(e) {
-	clearData(e);
-}, false);
+// btnReset.addEventListener('click', function(e) {
+// 	clearData(e);
+// }, false);
+
+// var myForm = document.getElementById('donald-inputs');
+	
+// 	myForm.addEventListener('submit', function(e) {
+// 		e.preventDefault();
+// 		console.log('works');
+// 	});
+
+
+// Event handler for form validation nested in IIFE
+(function() {
+	var myForm = document.getElementById('donald-inputs');
+	
+	myForm.addEventListener('submit', function(e) {
+		e.preventDefault();
+		var formElements = this.elements; // get the elements from this form
+		var valid = {}; // custom valid object that keeps track of whether or not each form control is valid. Each form control is added as a property of the valid object 
+		var isValid; // is a flag that is reused to check whether individual elements are valid
+		var isFormValid; // flag used as a master switch to check whether the entire form is valid
+
+		// loop through form elements and check whether they meet the required criteria
+		for (var i = 0; i < 3; i++) {
+			// check to see if element is required and if it is, does it have a value
+			// isValid = validateRequired(elements[i]) && validateTypes(elements[i]);
+			isValid = inputValueCheck(formElements[i]);
+			console.log(i);
+			// if the element value is not valid, call the error message function
+			if (!isValid) {
+				// showErrorMessage(formElements[i]);
+				errorDisplayFailed(formElements[i]);
+			} else {
+				removeErrorDisplay(formElements[i]);
+				// console.log('Things are cool');
+			}
+			valid[formElements[i].id] = isValid;   // Add element to the valid object
+		}
+		console.log(valid);
+
+		// DID IT PASS / CAN IT SUBMIT THE FORM?
+		for (var field in valid) {
+			if (!valid[field]) {              // If it is not valid
+	        	isFormValid = false;          // Set isFormValid variable to false
+	        	break;                        // Stop the for loop, an error was found
+	      	}                                 // Otherwise
+	      	isFormValid = true;               // The form is valid and OK to submit
+		}
+
+		if (isFormValid === true) {
+			// alert('Congrats you passed');
+			getInputs(e);
+		} else {
+			alert('One or more inputs have no value. Please correct.');
+		}
+
+	}); // ----- end of event listener
+
+	// function to display error message
+	function errorDisplayFailed(el) {
+		var parentEl = el.parentElement;
+		parentEl.removeAttribute('class', 'required')
+		parentEl.className += 'input-wrap failed';
+	}
+
+	// function to hide error message
+	function removeErrorDisplay(el) {
+		var parentEl = el.parentElement;
+		parentEl.removeAttribute('class', 'failed');
+		parentEl.className += 'input-wrap passed';
+	}
+
+	// function to check if input has value
+	function inputValueCheck(el) {
+	 	if (el.value === '') {
+	 		return false;   // If element has no value, return false
+	 	} else {
+	 		return true;
+	 	}
+	 }
+}());
 
 
 

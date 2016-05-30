@@ -1,0 +1,7 @@
+.failed p.errorMessage {
+    display:block;
+}
+
+.passed p.errorMessage, .required p.errorMessage {
+    display:none;
+}
