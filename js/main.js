@@ -99,7 +99,7 @@ btnReset.addEventListener('click', function(e) {
 			// check to see if element is required and if it is, does it have a value
 			// isValid = validateRequired(elements[i]) && validateTypes(elements[i]);
 			isValid = inputValueCheck(formElements[i]);
-			console.log(i);
+			// console.log(i);
 			// if the element value is not valid, call the error message function
 			if (!isValid) {
 				// showErrorMessage(formElements[i]);
@@ -110,7 +110,7 @@ btnReset.addEventListener('click', function(e) {
 			}
 			valid[formElements[i].id] = isValid;   // Add element to the valid object
 		}
-		console.log(valid);
+		// console.log(valid);
 
 		// DID IT PASS / CAN IT SUBMIT THE FORM?
 		for (var field in valid) {
