@@ -34,15 +34,7 @@ function buildPara(subSelect, paraReq, sentReq) {
 	tempDiv.setAttribute('id', 'temp-div');
 	buildIpsum.appendChild(tempDiv);
 	// loop that creates the number of paragraphs required and prints html to page
-	for (var i = 0; i < paraReq; i++) {
-		// logic for optional headings
-		// paraCount += 1;
-		// var divisible = paraCount/3;
-		// // build headings
-		// if (Number.isInteger(divisible) && headings == true) {
-		// 	buildHeadings();	
-		// }
-		
+	for (var i = 0; i < paraReq; i++) {		
 		var collectedPara = '';
 		// build the paragraph out of the sentences constructed above
 		collectedPara += buildSentences(subSelect, sentReq);
@@ -54,17 +46,6 @@ function buildPara(subSelect, paraReq, sentReq) {
 	}
 	return collectedPara;
 }
-
-// function buildHeadings() {
-// 	var buildHead = document.getElementById('body-text'); 
-// 	var elemH2 = document.createElement('h2');
-// 	var headingText = document.createTextNode('This is a dynamic heading');
-// 	elemH2.appendChild(headingText);
-// 	buildHead.appendChild(elemH2);
-// 	return buildHead;
-// }
-
-// var headings = false;
 
 // Get the selections from form and pass to buildPara function
 
@@ -88,7 +69,6 @@ function clearData(e) {
 }
 
 // var btn = document.getElementById('btn');
-
 // btn.addEventListener('click', function(e) {
 // 	getInputs(e);
 // }, false);
