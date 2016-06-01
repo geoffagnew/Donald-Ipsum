@@ -1,5 +1,9 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald:700,400);
+$heading: 'Oswald', helvetica, sans-serif;
+
 body {
-    background-color:white;
+    background:url(../img/thedonald.jpg) no-repeat top left #132861;
+    background-size:cover;
 }
 
 a {
@@ -10,9 +14,31 @@ p {
     margin-bottom:40px;
 }
 
+.intro {
+	width:50%;
+    margin:80px auto 0;
+    h1, p {
+    	text-align:center;
+    	color:#fff;
+
+    }
+    h1 {
+    	font-size:85px;
+    	margin:0;
+    	font-family:$heading;
+    	text-transform:uppercase;
+    }
+    p {
+    	font-size:20px;
+    }
+}
+
 .block-body {
     width:50%;
     margin:0 auto;
+    background:rgba(0, 0 ,0 ,0.7);
+    padding:2%;
+    border-radius:3px;
 }
 
 form {
@@ -20,4 +46,22 @@ form {
         width:100%;
         margin-bottom:25px;
     }
+    label {
+    	color:#fff;
+    }
+    .failed p.errorMessage {
+    	display:block;
+	}
+	.passed p.errorMessage, .required p.errorMessage {
+	    display:none;
+	}
+}
+
+.hide {
+    display:none;
+}
+
+#results {
+	background:#fff;
+	padding:25px;
 }

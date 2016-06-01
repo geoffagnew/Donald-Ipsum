@@ -12,21 +12,23 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/output.css">
-        <link rel="stylesheet" href="css/temp.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
 
     <div id="main-container" class="container">
+        <div class="intro">
+            <h1>Donald Ipsum</h1>
+            <p>Compose dummy text out of Donald Trump's finest quotes</p>
+        </div>
         <div class="block-body" id="body-text">
-       <!--  <h1>Donald Ipsum</h1> -->
             <form action="/my-handling-form-page" method="post" id="donald-inputs">
                 <div class="input-wrap">
                     <label for="name">Nature of text</label>
                     <select id="subject">
-                        <option value="racism">Racism</option>
-                        <option value="misogyny">Misogynistic</option>
                         <option value="weird">Weird and Delusional</option>
+                        <option value="racism">Racist</option>
+                        <option value="misogyny">Misogynistic</option>
                     </select>
                 </div>
                 <div class="input-wrap required">
@@ -40,7 +42,7 @@
                     <p class="errorMessage">Fill field</p>
                 </div>
                 <div class="input-wrap">
-                    <button type="submit" id="btn">Go</button>
+                    <button type="submit" id="btn-submit">Go</button>
                 </div>
                 <div class="input-wrap">
                     <button id="reset-btn">Reset</button>
@@ -52,7 +54,6 @@
 
        <!--  <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script> -->
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
-        <!-- <script src="js/validation.js"></script> -->
         <script src="js/main.js"></script>
     </body>
 </html>
