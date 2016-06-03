@@ -26,25 +26,51 @@ p {
 .block-body {
   width: 50%;
   margin: 0 auto;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(255, 255, 255, 0.8);
   padding: 2%;
-  border-radius: 3px; }
+  border-radius: 3px;
+  overflow: auto;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); }
 
-form .input-wrap {
-  width: 100%;
-  margin-bottom: 25px; }
-form label {
-  color: #fff; }
-form .failed p.errorMessage {
-  display: block; }
-form .passed p.errorMessage, form .required p.errorMessage {
-  display: none; }
-
-.hide {
-  display: none; }
+form {
+  display: block;
+  overflow: auto; }
+  form .input-wrap {
+    width: 26%;
+    float: left;
+    display: block;
+    margin-bottom: 25px;
+    padding-right: 4%; }
+    form .input-wrap#text-type {
+      width: 36%; }
+    form .input-wrap select, form .input-wrap input {
+      width: 99%; }
+    form .input-wrap input {
+      border-radius: 3px;
+      padding: 1%; }
+  form label {
+    color: #000;
+    display: block;
+    margin-bottom: 20px; }
+  form #btn-submit {
+    background: red;
+    border-radius: 3px;
+    padding: 10px 15px;
+    border: none;
+    color: #fff; }
+  form .failed p.errorMessage {
+    display: block; }
+  form .passed p.errorMessage, form .required p.errorMessage {
+    display: none; }
 
 #results {
   background: #fff;
-  padding: 25px; }
+  padding: 25px;
+  display: block; }
+  #results.hide {
+    display: none; }
+
+.hide {
+  display: none; }
 
 /*# sourceMappingURL=output.css.map */

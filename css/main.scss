@@ -19,8 +19,7 @@ p {
     margin:80px auto 0;
     h1, p {
     	text-align:center;
-    	color:#fff;
-
+        color:#fff;
     }
     h1 {
     	font-size:85px;
@@ -36,18 +35,44 @@ p {
 .block-body {
     width:50%;
     margin:0 auto;
-    background:rgba(0, 0 ,0 ,0.7);
+    background:rgba(256, 256, 256 ,0.8);
     padding:2%;
     border-radius:3px;
+    overflow:auto;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
 
 form {
+    display:block;
+    overflow:auto;
     .input-wrap {
-        width:100%;
+        width:26%;
+        float:left;
+        display:block;
         margin-bottom:25px;
+        padding-right:4%;
+        &#text-type {
+            width:36%;
+        }
+        select, input {
+            width:99%;
+        }
+        input {
+            border-radius:3px;
+            padding:1%;
+        }
     }
     label {
-    	color:#fff;
+    	color:#000;
+        display:block;
+        margin-bottom:20px;
+    }
+    #btn-submit {
+        background:red;
+        border-radius:3px;
+        padding:10px 15px;
+        border:none;
+        color:#fff;
     }
     .failed p.errorMessage {
     	display:block;
@@ -57,11 +82,15 @@ form {
 	}
 }
 
-.hide {
-    display:none;
+#results {
+    background:#fff;
+    padding:25px;
+    display:block;
+    &.hide {
+        display:none;
+    }
 }
 
-#results {
-	background:#fff;
-	padding:25px;
+.hide {
+    display:none;
 }
