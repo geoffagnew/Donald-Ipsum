@@ -15,14 +15,17 @@ p {
 }
 
 .intro {
-	width:50%;
+	/*width:50%;
+    margin:80px auto 0;*/
+    width:90%;
     margin:80px auto 0;
     h1, p {
     	text-align:center;
         color:#fff;
     }
     h1 {
-    	font-size:85px;
+    	/*font-size:85px;*/
+        font-size:55px;
     	margin:0;
     	font-family:$heading;
     	text-transform:uppercase;
@@ -33,16 +36,68 @@ p {
 }
 
 .block-body {
-    width:50%;
-    margin:0 auto;
+   /* width:50%;*/
+    width:90%;
+    margin:0 auto 10%;
     background:rgba(256, 256, 256 ,0.8);
-    padding:2%;
+    padding:2% 0;
     border-radius:3px;
     overflow:auto;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
 
 form {
+    display:block;
+   /* overflow:auto;*/
+    padding:0 5%;
+    .input-wrap {
+        width:100%;
+        /*float:left;*/
+        display:block;
+        margin-bottom:25px;
+        /*padding-right:4%;*/
+        &#text-type {
+            /*width:36%;*/
+        }
+        input, select {
+            width:100%;
+            border-radius:3px;
+            border:1px solid grey;
+            font-size:13px;
+        }
+        input {
+            width:95%;
+            padding:5% 0 5% 5%;
+        }
+        select {
+            /*padding:10%;*/
+        }
+    }
+    label {
+        color:#000;
+        display:block;
+        /*margin-bottom:20px;*/
+        margin-bottom:5px;
+    }
+    #btn-submit {
+        background:red;
+        border-radius:3px;
+        padding:10px 15px;
+        border:none;
+        color:#fff;
+        width:100%;
+    }
+    .failed p.errorMessage {
+        display:block;
+        color:red;
+        font-style:italic;
+    }
+    .passed p.errorMessage, .required p.errorMessage {
+        display:none;
+    }
+}
+
+/*form {
     display:block;
     overflow:auto;
     .input-wrap {
@@ -57,9 +112,14 @@ form {
         select, input {
             width:99%;
         }
-        input {
+        input, select {
             border-radius:3px;
-            padding:1%;
+            padding:5% 3%;
+            border:1px solid grey;
+            font-size:13px;
+        }
+        select {
+            padding:10%;
         }
     }
     label {
@@ -76,11 +136,13 @@ form {
     }
     .failed p.errorMessage {
     	display:block;
+        color:red;
+        font-style:italic;
 	}
 	.passed p.errorMessage, .required p.errorMessage {
 	    display:none;
 	}
-}
+}*/
 
 #results {
     background:#fff;
@@ -88,6 +150,13 @@ form {
     display:block;
     &.hide {
         display:none;
+    }
+}
+
+footer {
+    p {
+        text-align:center;
+        color:white;
     }
 }
 

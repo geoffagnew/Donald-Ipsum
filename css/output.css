@@ -10,13 +10,16 @@ p {
   margin-bottom: 40px; }
 
 .intro {
-  width: 50%;
+  	/*width:50%;
+      margin:80px auto 0;*/
+  width: 90%;
   margin: 80px auto 0; }
   .intro h1, .intro p {
     text-align: center;
     color: #fff; }
   .intro h1 {
-    font-size: 85px;
+    /*font-size:85px;*/
+    font-size: 55px;
     margin: 0;
     font-family: "Oswald", helvetica, sans-serif;
     text-transform: uppercase; }
@@ -24,51 +27,112 @@ p {
     font-size: 20px; }
 
 .block-body {
-  width: 50%;
-  margin: 0 auto;
+  /* width:50%;*/
+  width: 90%;
+  margin: 0 auto 10%;
   background: rgba(255, 255, 255, 0.8);
-  padding: 2%;
+  padding: 2% 0;
   border-radius: 3px;
   overflow: auto;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); }
 
 form {
   display: block;
-  overflow: auto; }
+  /* overflow:auto;*/
+  padding: 0 5%; }
   form .input-wrap {
-    width: 26%;
-    float: left;
+    width: 100%;
+    /*float:left;*/
     display: block;
     margin-bottom: 25px;
-    padding-right: 4%; }
+    /*padding-right:4%;*/ }
     form .input-wrap#text-type {
-      width: 36%; }
-    form .input-wrap select, form .input-wrap input {
-      width: 99%; }
-    form .input-wrap input {
+      /*width:36%;*/ }
+    form .input-wrap input, form .input-wrap select {
+      width: 100%;
       border-radius: 3px;
-      padding: 1%; }
+      border: 1px solid grey;
+      font-size: 13px; }
+    form .input-wrap input {
+      width: 95%;
+      padding: 5% 0 5% 5%; }
+    form .input-wrap select {
+      /*padding:10%;*/ }
   form label {
     color: #000;
     display: block;
-    margin-bottom: 20px; }
+    /*margin-bottom:20px;*/
+    margin-bottom: 5px; }
   form #btn-submit {
     background: red;
     border-radius: 3px;
     padding: 10px 15px;
     border: none;
-    color: #fff; }
+    color: #fff;
+    width: 100%; }
   form .failed p.errorMessage {
-    display: block; }
+    display: block;
+    color: red;
+    font-style: italic; }
   form .passed p.errorMessage, form .required p.errorMessage {
     display: none; }
 
+/*form {
+    display:block;
+    overflow:auto;
+    .input-wrap {
+        width:26%;
+        float:left;
+        display:block;
+        margin-bottom:25px;
+        padding-right:4%;
+        &#text-type {
+            width:36%;
+        }
+        select, input {
+            width:99%;
+        }
+        input, select {
+            border-radius:3px;
+            padding:5% 3%;
+            border:1px solid grey;
+            font-size:13px;
+        }
+        select {
+            padding:10%;
+        }
+    }
+    label {
+    	color:#000;
+        display:block;
+        margin-bottom:20px;
+    }
+    #btn-submit {
+        background:red;
+        border-radius:3px;
+        padding:10px 15px;
+        border:none;
+        color:#fff;
+    }
+    .failed p.errorMessage {
+    	display:block;
+        color:red;
+        font-style:italic;
+	}
+	.passed p.errorMessage, .required p.errorMessage {
+	    display:none;
+	}
+}*/
 #results {
   background: #fff;
   padding: 25px;
   display: block; }
   #results.hide {
     display: none; }
+
+footer p {
+  text-align: center;
+  color: white; }
 
 .hide {
   display: none; }
