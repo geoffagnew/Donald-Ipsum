@@ -7,13 +7,14 @@ a {
   text-decoration: none; }
 
 p {
-  margin-bottom: 40px; }
+  margin-bottom: 40px;
+  line-height: 22px; }
 
 .intro {
   	/*width:50%;
       margin:80px auto 0;*/
   width: 90%;
-  margin: 80px auto 0; }
+  margin: 10% auto 0; }
   .intro h1, .intro p {
     text-align: center;
     color: #fff; }
@@ -31,7 +32,7 @@ p {
   width: 90%;
   margin: 0 auto 10%;
   background: rgba(255, 255, 255, 0.8);
-  padding: 2% 0;
+  padding: 5% 0 0;
   border-radius: 3px;
   overflow: auto;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); }
@@ -52,18 +53,20 @@ form {
       width: 100%;
       border-radius: 3px;
       border: 1px solid grey;
-      font-size: 13px; }
+      font-size: 14px;
+      padding: 3% 0 3% 3%; }
     form .input-wrap input {
-      width: 95%;
-      padding: 5% 0 5% 5%; }
+      width: 97%; }
     form .input-wrap select {
-      /*padding:10%;*/ }
+      padding: 10px;
+      -webkit-appearance: none !important; }
   form label {
     color: #000;
     display: block;
-    /*margin-bottom:20px;*/
-    margin-bottom: 5px; }
-  form #btn-submit {
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 14px; }
+  form #btn-submit, form #reset-btn {
     background: red;
     border-radius: 3px;
     padding: 10px 15px;
@@ -73,7 +76,9 @@ form {
   form .failed p.errorMessage {
     display: block;
     color: red;
-    font-style: italic; }
+    font-style: italic;
+    font-weight: bold;
+    font-size: 14px; }
   form .passed p.errorMessage, form .required p.errorMessage {
     display: none; }
 
@@ -136,5 +141,9 @@ footer p {
 
 .hide {
   display: none; }
+
+@media (min-width: 700px) {
+  form .input-wrap input, form .input-wrap select {
+    padding: 10px; } }
 
 /*# sourceMappingURL=output.css.map */
