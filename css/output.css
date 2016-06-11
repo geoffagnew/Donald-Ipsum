@@ -1,46 +1,54 @@
 @import url(https://fonts.googleapis.com/css?family=Oswald:700,400);
 body {
-  background: url(../img/thedonald.jpg) no-repeat top left #132861;
-  background-size: cover; }
+  background: url(../img/thedonaldz.jpg) no-repeat top left #233678;
+  background-size: cover;
+  -webkit-font-smoothing: antialiased;
+  color: #212121; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  opacity: 1;
+  cursor: pointer; }
+  a:hover {
+    opacity: 0.5; }
 
 p {
   margin-bottom: 40px;
   line-height: 22px; }
 
 .intro {
-  	/*width:50%;
-      margin:80px auto 0;*/
   width: 90%;
   margin: 10% auto 0; }
   .intro h1, .intro p {
     text-align: center;
     color: #fff; }
   .intro h1 {
-    /*font-size:85px;*/
     font-size: 55px;
     margin: 0;
     font-family: "Oswald", helvetica, sans-serif;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    line-height: 60px; }
   .intro p {
-    font-size: 20px; }
+    font-size: 20px;
+    line-height: 25px; }
 
 .block-body {
-  /* width:50%;*/
   width: 90%;
   margin: 0 auto 10%;
   background: rgba(255, 255, 255, 0.8);
   padding: 5% 0 0;
   border-radius: 3px;
   overflow: auto;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); }
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  border: 1px solid white; }
 
 form {
   display: block;
   /* overflow:auto;*/
-  padding: 0 5%; }
+  padding: 0 5%;
+  /*#reset-btn {
+      background:$blue;
+  }*/ }
   form .input-wrap {
     width: 100%;
     /*float:left;*/
@@ -67,7 +75,7 @@ form {
     font-weight: bold;
     font-size: 14px; }
   form #btn-submit, form #reset-btn {
-    background: red;
+    background: #f50000;
     border-radius: 3px;
     padding: 10px 15px;
     border: none;
@@ -75,74 +83,48 @@ form {
     width: 100%; }
   form .failed p.errorMessage {
     display: block;
-    color: red;
+    color: #f50000;
     font-style: italic;
     font-weight: bold;
     font-size: 14px; }
   form .passed p.errorMessage, form .required p.errorMessage {
     display: none; }
 
-/*form {
-    display:block;
-    overflow:auto;
-    .input-wrap {
-        width:26%;
-        float:left;
-        display:block;
-        margin-bottom:25px;
-        padding-right:4%;
-        &#text-type {
-            width:36%;
-        }
-        select, input {
-            width:99%;
-        }
-        input, select {
-            border-radius:3px;
-            padding:5% 3%;
-            border:1px solid grey;
-            font-size:13px;
-        }
-        select {
-            padding:10%;
-        }
-    }
-    label {
-    	color:#000;
-        display:block;
-        margin-bottom:20px;
-    }
-    #btn-submit {
-        background:red;
-        border-radius:3px;
-        padding:10px 15px;
-        border:none;
-        color:#fff;
-    }
-    .failed p.errorMessage {
-    	display:block;
-        color:red;
-        font-style:italic;
-	}
-	.passed p.errorMessage, .required p.errorMessage {
-	    display:none;
-	}
-}*/
 #results {
   background: #fff;
   padding: 25px;
   display: block; }
+  #results p:first-child:first-letter {
+    float: left;
+    color: #212121;
+    font-size: 80px;
+    line-height: 60px;
+    padding-top: 4px;
+    padding-right: 8px;
+    padding-left: 3px;
+    font-weight: bold; }
   #results.hide {
     display: none; }
 
 footer p {
   text-align: center;
   color: white; }
+footer a {
+  color: #90CAF9; }
 
 .hide {
   display: none; }
 
 @media (min-width: 700px) {
+  .intro h1 {
+    font-size: 85px;
+    margin-bottom: 50px; }
+
+  .block-body {
+    width: 550px;
+    padding: 25px 0 0;
+    margin: 0 auto 55px; }
+
   form .input-wrap input, form .input-wrap select {
     padding: 10px; } }
 

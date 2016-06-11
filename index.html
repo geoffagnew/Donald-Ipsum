@@ -23,27 +23,28 @@
         </div>
         <div class="block-body" id="body-text">
             <form action="/my-handling-form-page" method="post" id="donald-inputs">
-                <div id="text-type" class="input-wrap">
-                    <label for="name">Nature of text</label>
-                    <select id="subject">
-                        <option value="weird">Weird and Delusional</option>
-                        <option value="racism">Racist</option>
-                        <option value="misogyny">Misogynistic</option>
-                    </select>
-                    
-                </div>
-                <div class="input-wrap required">
-                    <label for="name">Number of Paragraphs</label>
-                    <input type="number" id="paragraphs" name="paragraphs" />
-                    <p class="errorMessage">You're pathetic! Pick a number champ!</p>
-                </div>
-                <div class="input-wrap required">
-                    <label for="name">Number of sentences per paragraph</label>
-                    <input type="number" id="sentences" name="sentences" />
-                    <p class="errorMessage">Disgusting! Pick a number!</p>
-                </div>
-                <div class="input-wrap">
-                    <button type="submit" id="btn-submit">Give me the words, the best words</button>
+                <div id="main-inputs">
+                    <div id="text-type" class="input-wrap">
+                        <label for="name">Nature of text</label>
+                        <select id="subject">
+                            <option value="weird">Weird and Delusional</option>
+                            <option value="racism">Racist</option>
+                            <option value="misogyny">Misogynistic</option>
+                        </select>
+                    </div>
+                    <div class="input-wrap required">
+                        <label for="name">Number of Paragraphs</label>
+                        <input type="number" id="paragraphs" name="paragraphs" />
+                        <p class="errorMessage">You're pathetic! Pick a number champ!</p>
+                    </div>
+                    <div class="input-wrap required">
+                        <label for="name">Number of sentences per paragraph</label>
+                        <input type="number" id="sentences" name="sentences" />
+                        <p class="errorMessage">Disgusting! Pick a number!</p>
+                    </div>
+                    <div class="input-wrap">
+                        <button type="submit" id="btn-submit">Give me the words, the best words</button>
+                    </div>
                 </div>
                 <div class="input-wrap">
                     <button id="reset-btn">Reset the words, I would like other words</button>
