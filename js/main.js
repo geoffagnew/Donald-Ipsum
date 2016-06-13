@@ -1,3 +1,13 @@
+function PlaySound(soundobj) {
+    var thissound=document.getElementById(soundobj);
+    thissound.play();
+}
+
+function StopSound(soundobj) {
+    var thissound=document.getElementById(soundobj);
+    thissound.pause();
+    thissound.currentTime = 0;
+}
 
 var racism = ['When Mexico sends its people, they’re not sending the best. They’re not sending you, they’re sending people that have lots of problems and they’re bringing those problems with us. They’re bringing drugs. They’re bring crime. They’re rapists… And some, I assume, are good people.', 'The concept of global warming was created by and for the Chinese in order to make U.S. manufacturing non-competitive.', 'Donald J. Trump is calling for a total and complete shutdown of Muslims entering the United States until our country\'s representatives can figure out what is going on.', 'When these people walk in the room, they don’t say, ‘Oh, hello! How’s the weather? It’s so beautiful outside. Isn’t it lovely? How are the Yankees doing? Oh they’re doing wonderful. Great.’ [Asians] say, ‘We want deal!', '#JebBush has to like the Mexican illegals because of his wife.', 'So true. Jeb Bush is crazy, who cares that he speaks Mexican, this is America, English!!', 'Laziness is a trait in blacks.', 'I have a great relationship with the blacks. I’ve always had a great relationship with the blacks.', 'Our great African American President hasn\'t exactly had a positive impact on the thugs who are so happily and openly destroying Baltimore!', 'His name is Gonzalo Curiel. And he is not doing the right thing ... [He] happens to be, we believe, Mexican.'];
 

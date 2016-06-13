@@ -1,3 +1,5 @@
+/* PLEASE AMERICA, DON'T GIVE THIS MANIAC CONTROL. - XOXO, THE WORLD */ 
+
 @import url(https://fonts.googleapis.com/css?family=Oswald:700,400);
 $heading: 'Oswald', helvetica, sans-serif;
 
@@ -29,6 +31,13 @@ p {
 .intro {
     width:90%;
     margin:10% auto 0;
+    #donnie-mug {
+        width:40%;
+        margin:0 auto;
+        img {
+            width:100%;
+        }
+    }
     h1, p {
     	text-align:center;
         color:#fff;
@@ -73,7 +82,7 @@ form {
         input, select {
             width:100%;
             border-radius:3px;
-            border:1px solid grey;
+            border:1px solid #969696;
             font-size:14px;
             padding:3% 0 3% 3%;
         }
@@ -83,6 +92,7 @@ form {
         select {
             padding:10px;
             -webkit-appearance:none !important;
+            background:url(../img/arrow-down.svg) no-repeat 98% 50% white;
         }
     }
     label {
@@ -96,7 +106,8 @@ form {
         background:$red;
         border-radius:3px;
         padding:10px 15px;
-        border:none;
+        border:1px solid #d60000;
+        font-weight:bold;
         color:#fff;
         width:100%;
     }
@@ -150,6 +161,11 @@ footer {
 
 @media (screen and min-width: 700px) {
     .intro {
+        margin:30px auto 0;
+        #donnie-mug {
+            width:200px;
+            padding-bottom:25px;
+        }
         h1 {
             font-size:85px;
             margin-bottom:50px;

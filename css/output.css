@@ -1,3 +1,4 @@
+/* PLEASE AMERICA, DON'T GIVE THIS MANIAC CONTROL. - XOXO, THE WORLD */
 @import url(https://fonts.googleapis.com/css?family=Oswald:700,400);
 body {
   background: url(../img/thedonaldz.jpg) no-repeat top left #233678;
@@ -19,6 +20,11 @@ p {
 .intro {
   width: 90%;
   margin: 10% auto 0; }
+  .intro #donnie-mug {
+    width: 40%;
+    margin: 0 auto; }
+    .intro #donnie-mug img {
+      width: 100%; }
   .intro h1, .intro p {
     text-align: center;
     color: #fff; }
@@ -60,14 +66,15 @@ form {
     form .input-wrap input, form .input-wrap select {
       width: 100%;
       border-radius: 3px;
-      border: 1px solid grey;
+      border: 1px solid #969696;
       font-size: 14px;
       padding: 3% 0 3% 3%; }
     form .input-wrap input {
       width: 97%; }
     form .input-wrap select {
       padding: 10px;
-      -webkit-appearance: none !important; }
+      -webkit-appearance: none !important;
+      background: url(../img/arrow-down.svg) no-repeat 98% 50% white; }
   form label {
     color: #000;
     display: block;
@@ -78,7 +85,8 @@ form {
     background: #f50000;
     border-radius: 3px;
     padding: 10px 15px;
-    border: none;
+    border: 1px solid #d60000;
+    font-weight: bold;
     color: #fff;
     width: 100%; }
   form .failed p.errorMessage {
@@ -116,9 +124,14 @@ footer a {
   display: none; }
 
 @media (min-width: 700px) {
-  .intro h1 {
-    font-size: 85px;
-    margin-bottom: 50px; }
+  .intro {
+    margin: 30px auto 0; }
+    .intro #donnie-mug {
+      width: 200px;
+      padding-bottom: 25px; }
+    .intro h1 {
+      font-size: 85px;
+      margin-bottom: 50px; }
 
   .block-body {
     width: 550px;
