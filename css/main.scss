@@ -8,8 +8,7 @@ $blue:#233678;
 $dark-grey:#212121;
 
 body {
-    background:url(../img/thedonaldz.jpg) no-repeat top left $blue;
-    background-size:cover;
+    background:$blue;
     -webkit-font-smoothing: antialiased;
     color:$dark-grey;
 }

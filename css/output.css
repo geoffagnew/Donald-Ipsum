@@ -1,8 +1,7 @@
 /* PLEASE AMERICA, DON'T GIVE THIS MANIAC CONTROL. - XOXO, THE WORLD */
 @import url(https://fonts.googleapis.com/css?family=Oswald:700,400);
 body {
-  background: url(../img/thedonaldz.jpg) no-repeat top left #233678;
-  background-size: cover;
+  background: #233678;
   -webkit-font-smoothing: antialiased;
   color: #212121; }
 
