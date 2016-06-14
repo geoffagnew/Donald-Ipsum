@@ -92,6 +92,7 @@ form {
         select {
             padding:10px;
             -webkit-appearance:none !important;
+            -moz-appearance: none !important;
             background:url(../img/arrow-down.svg) no-repeat 98% 50% white;
         }
     }
