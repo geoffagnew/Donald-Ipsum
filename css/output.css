@@ -44,8 +44,7 @@ p {
   padding: 5% 0 0;
   border-radius: 3px;
   overflow: auto;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-  border: 1px solid white; }
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); }
 
 form {
   display: block;
@@ -69,7 +68,7 @@ form {
       font-size: 14px;
       padding: 3% 0 3% 3%; }
     form .input-wrap input {
-      width: 97%; }
+      width: 96%; }
     form .input-wrap select {
       padding: 10px;
       -webkit-appearance: none !important;

@@ -62,7 +62,6 @@ p {
     border-radius:3px;
     overflow:auto;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-    border:1px solid white;
 }
 
 form {
@@ -86,7 +85,7 @@ form {
             padding:3% 0 3% 3%;
         }
         input {
-            width:97%;
+            width:96%;
         }
         select {
             padding:10px;
@@ -183,6 +182,9 @@ footer {
             input, select {
                 padding:10px;
             }
+            // select {
+            //     width:100%;
+            // }
        } 
     }
 
